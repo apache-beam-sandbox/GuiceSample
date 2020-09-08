@@ -1,0 +1,25 @@
+package com.tna.singleImpl;
+
+import com.google.inject.Inject;
+
+public class CheckoutService{
+
+    private final IDiscountable discountable;
+
+    @Inject
+    public CheckoutService(IDiscountable discountable){
+        this.discountable=discountable;
+    }
+
+    public double checkout(double cartTotal){
+        double discount = discountable.getDiscount();
+        double totalAfterDiscount = cartTotal - (cartTotal*discount);
+        System.out.printf("%nShopping cart intially [$%.2f] with a discount of %.2f%% " +
+                        "- [$%.2f]%n%n",
+                cartTotal,
+                discount * 100,
+                totalAfterDiscount);
+
+        return totalAfterDiscount;
+    }
+}

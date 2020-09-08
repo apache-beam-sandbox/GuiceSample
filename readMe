@@ -1,0 +1,12 @@
+Going to brief with below topics
+
+- Guice Single Interface Implementation
+- Guice DI
+- Guice gives us Providers Implicit and Explicit
+    - with annotation @ProvidesBy and @Provides
+- Illustrate how to use Guice Provider
+- Injecting into providers ( inject runtime implementation)
+- Injecting Runtime Data into providers
+- Rolling our own factory
+
+- Assisted inject
